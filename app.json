@@ -12,7 +12,10 @@
       "supportsTablet": true,
       "infoPlist": {
         "NSLocalNetworkUsageDescription": "This app uses the local network to communicate with nearby devices offline.",
-        "NSBonjourServices": ["_http._tcp.", "_tcp.local."],
+        "NSBonjourServices": [
+          "_http._tcp.",
+          "_tcp.local."
+        ],
         "NSCameraUsageDescription": "This app uses camera for video calls.",
         "NSMicrophoneUsageDescription": "This app uses microphone for voice and video calls.",
         "NSBluetoothAlwaysUsageDescription": "This app uses Bluetooth for offline device discovery and communication.",
@@ -43,8 +46,11 @@
         "INTERNET",
         "BLUETOOTH_SCAN",
         "BLUETOOTH_CONNECT",
-        "BLUETOOTH_ADVERTISE"
-      ]
+        "BLUETOOTH_ADVERTISE",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ],
+      "package": "com.abhishek12414.taranga"
     },
     "web": {
       "output": "static",
@@ -77,6 +83,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "ef6a9292-bdd8-4ef8-9541-df18989a4df0"
+      }
     }
   }
 }
