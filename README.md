@@ -43,6 +43,11 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npx expo start
    ```
 
+   For physical device on WiFi (Expo Go):
+   - Use LAN mode: `npx expo start --lan`
+   - If custom IP needed (e.g. your PC IP): `REACT_NATIVE_PACKAGER_HOSTNAME=192.168.29.206 npx expo start --lan --android`
+   - Ensure devices on same network, firewall allows, and scan QR in Expo Go.
+
 4. Run on your device
    - Scan the QR code with Expo Go (Android) or Camera app (iOS)
    - Or press `a` for Android emulator, `i` for iOS simulator

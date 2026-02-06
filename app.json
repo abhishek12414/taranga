@@ -9,7 +9,15 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocalNetworkUsageDescription": "This app uses the local network to communicate with nearby devices offline.",
+        "NSBonjourServices": ["_http._tcp.", "_tcp.local."],
+        "NSCameraUsageDescription": "This app uses camera for video calls.",
+        "NSMicrophoneUsageDescription": "This app uses microphone for voice and video calls.",
+        "NSBluetoothAlwaysUsageDescription": "This app uses Bluetooth for offline device discovery and communication.",
+        "NSBluetoothPeripheralUsageDescription": "This app uses Bluetooth peripherals for P2P connections."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -19,7 +27,24 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.ACCESS_WIFI_STATE",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.CHANGE_WIFI_MULTICAST_STATE",
+        "android.permission.INTERNET",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "CHANGE_WIFI_STATE",
+        "ACCESS_WIFI_STATE",
+        "NEARBY_WIFI_DEVICES",
+        "RECORD_AUDIO",
+        "CAMERA",
+        "INTERNET",
+        "BLUETOOTH_SCAN",
+        "BLUETOOTH_CONNECT",
+        "BLUETOOTH_ADVERTISE"
+      ]
     },
     "web": {
       "output": "static",
@@ -36,6 +61,15 @@
           "backgroundColor": "#ffffff",
           "dark": {
             "backgroundColor": "#000000"
+          }
+        }
+      ],
+      "expo-audio",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
           }
         }
       ]
